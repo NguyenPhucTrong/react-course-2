@@ -1,13 +1,15 @@
 // import logo from "./logo.svg";
 import React from "react";
 import "./App.css";
-import Component1 from "./component/component1";
+// import Component1 from "./component/component1";
+import RefsDemo from "./component/RefsDemo";
 
 function App() {
   return (
     <React.Fragment className="App">
-      <h1>This is App Component</h1>
-      <Component1 />
+      {/* <h1>This is App Component</h1>
+      <Component1 /> */}
+      <RefsDemo />
     </React.Fragment>
   );
 }
