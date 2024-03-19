@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import Span from "../UI/Span/Span";
 import Button from "../UI/Button/Button";
 
@@ -8,7 +8,10 @@ function Demo() {
 
   let increaseHandler = useCallback(
     function () {
-      if (active) updateCount(count + 1);
+      if (active)
+        updateCount((count) => {
+          return count + 1;
+        });
       console.log(count);
     },
     [active]
@@ -23,7 +26,12 @@ function Demo() {
 
   function activeHandler() {
     setActive(true);
+    updateCount(0);
   }
+
+  let list = useMemo(() => {
+    return [10, 20];
+  }, []);
 
   return (
     <div style={{ top: "20px" }}>
@@ -31,7 +39,7 @@ function Demo() {
         -
       </button> */}
       <Button clickHandler={decreaseHandler}>-</Button>
-      <Span>{count}</Span>
+      <Span>{list}</Span>
       {/* <button style={{ margin: "10px" }} onClick={increaseHandler}>
         +
       </button> */}
