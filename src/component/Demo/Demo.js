@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo } from "react";
 import Span from "../UI/Span/Span";
 import Button from "../UI/Button/Button";
 
-function Demo() {
+function Demo1() {
   let [count, updateCount] = useState(0);
   let [active, setActive] = useState(false);
 
@@ -49,4 +49,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default Demo1;

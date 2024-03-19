@@ -1,7 +1,8 @@
 // import logo from "./logo.svg";
 // import React from "react";
 import "./App.css";
-import Demo from "./component/Demo/Demo";
+import Demo from "./component/Demo";
+// import Demo from "./component/Demo";
 // import Component1 from "./component/component1";
 // import RefsDemo from "./component/RefsDemo";
 // import { useState, useEffect } from "react";
@@ -9,7 +10,9 @@ import Demo from "./component/Demo/Demo";
 function App() {
   return (
     <div className="App">
-      <Demo />
+      {/* <Demo /> */}
+      <Demo name={"Hello Word"}> Hi everyone </Demo>
+      {/* <Demo> Hi everyone </Demo> */}
     </div>
   );
 }
