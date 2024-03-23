@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Paragraph from "./Paragraph";
 class Demo extends Component {
   constructor() {
     super();
@@ -13,11 +14,19 @@ class Demo extends Component {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    // try {
+    throw new Error("An error has occured");
+    // } catch (error) {
+    //   alert(error.message);
+    // }
+  }
+
   render() {
     return (
       <>
         <h1>{this.props.name}</h1>
-        {this.state.showParagraph && <p>{this.props.children}</p>}
+        {this.state.showParagraph && <Paragraph></Paragraph>}
         <button onClick={this.toggaleParagraph.bind(this)}>Show</button>
       </>
     );
